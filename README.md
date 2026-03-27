@@ -1,16 +1,34 @@
-## Hi there 👋
+# chaseworkslab homelab
 
-<!--
-**chaserbot/chaserbot** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+3x Mac Mini cluster running Proxmox VE, self-hosted services, and ongoing automation experiments.
 
-Here are some ideas to get you started:
+> Goal: if the house burned down and new hardware showed up, these repos are everything needed to get back to a running state.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+## Repos
+
+| Repo | Description | Status |
+|---|---|---|
+| [chaseworkslab-proxmox](https://github.com/chaserbot/chaseworkslab-proxmox) | Proxmox VE post-install, cluster setup, NFS storage | 🔧 Active |
+
+---
+
+## Hardware
+
+| Device | Role |
+|---|---|
+| Mac Mini x3 (A1347) | Proxmox cluster — pve1, pve2, pve3 |
+| Mac Mini x1 (A1347) | NAS / Pegasus DAS host (macOS) |
+| Ace Magician CK10 | Jellyfin media server |
+| Pegasus DAS | Shared storage via Thunderbolt |
+| Luxul ABR-5000 | Router |
+| Ubiquiti USW PoE 8 Lite | Switch |
+
+---
+
+## Planned
+
+- `chaseworkslab-network` — DNS, VLANs, Tailscale
+- `chaseworkslab-media` — Jellyfin, arr-stack, qBittorrent
+- `chaseworkslab-services` — Paperless, Uptime Kuma, n8n, AdGuard
