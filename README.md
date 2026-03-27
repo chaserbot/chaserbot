@@ -1,34 +1,45 @@
-# ChaseWorksLab Homelab
+# Hey, I'm Chase 👋
 
-3x Mac Mini cluster running Proxmox VE, self-hosted services, and ongoing automation experiments.
+Event production by day. Homelab, self-hosting, and automation by night.
 
-> Goal: if the house burned down and new hardware showed up, these repos are everything needed to get back to a running state.
-
----
-
-## Repos
-
-| Repo | Description | Status |
-|---|---|---|
-| [chaseworkslab-proxmox](https://github.com/chaserbot/chaseworkslab-proxmox) | Proxmox VE post-install, cluster setup, NFS storage | 🔧 Active |
+I document my homelab build publicly so others can use the scripts and
+learn from what works (and what doesn't).
 
 ---
 
-## Hardware
+## 🖥 The Lab
 
-| Device | Role |
-|---|---|
-| Mac Mini x3 (A1347) | Proxmox cluster — pve1, pve2, pve3 |
-| Mac Mini x1 (A1347) | NAS / Pegasus DAS host (macOS) |
-| Ace Magician CK10 | Jellyfin media server |
-| Pegasus DAS | Shared storage via Thunderbolt |
-| Luxul ABR-5000 | Router |
-| Ubiquiti USW PoE 8 Lite | Switch |
+3-node Proxmox cluster on Mac Mini A1347s, a macOS NAS brain with a Pegasus DAS,
+Pi-hole for DNS, and a growing stack of self-hosted services.
+
+Long-term goals: reproducible infrastructure, everything in Git,
+wipe-and-restore any machine in under an hour.
 
 ---
 
-## Planned
+## 📦 Public Repos
 
-- `chaseworkslab-network` — DNS, VLANs, Tailscale
-- `chaseworkslab-media` — Jellyfin, arr-stack, qBittorrent
-- `chaseworkslab-services` — Paperless, Uptime Kuma, n8n, AdGuard
+| Repo | What it is |
+|------|------------|
+| [chaseworkslab-proxmox](https://github.com/chaserbot/chaseworkslab-proxmox) | Proxmox VE install scripts for Mac Mini A1347 hardware |
+| chaseworkslab-docker *(coming soon)* | Docker Compose stacks for self-hosted services |
+| chaseworkslab-dns *(coming soon)* | Pi-hole / LXC DNS configs |
+
+---
+
+## 🔧 Current Stack
+
+- **Hypervisor:** Proxmox VE
+- **Storage:** Pegasus DAS via macOS SMB/NFS
+- **DNS:** Pi-hole
+- **Remote access:** Tailscale *(in progress)*
+- **Automation:** n8n *(in progress)*
+- **Media:** Jellyfin, Audiobookshelf
+- **Arr stack:** Sonarr, Radarr, qBittorrent, Overseerr
+- **Monitoring:** Uptime Kuma
+- **Docs:** Paperless-ngx
+
+---
+
+*Scripts are written to be curl-friendly and reusable on identical hardware.
+Use at your own risk, PRs welcome.*
