@@ -1,4 +1,4 @@
-# chaseworkslab homelab
+# ChaseWorksLab Homelab
 
 3x Mac Mini cluster running Proxmox VE, self-hosted services, and ongoing automation experiments.
 
